@@ -9,7 +9,7 @@ public class HomeController {
 
 	@RequestMapping("/")
 	public @ResponseBody String greeting() {
-		return "Finaliza el curso DevOps Foundation v2 - Lourdes Torres";
+		return "Finaliza el curso DevOps Foundation v2 - Lourdes Torres a";
 	}
 
 }
