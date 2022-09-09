@@ -9,9 +9,9 @@ node {
   sh "./gradlew clean test"
   }
   
-  stage('SonarQube') {
+  stage('Sonar') {
     withSonarQubeEnv() { 
-      sh './gradlew sonarqube'
+      sh "${scannerHome}/bin/sonar-scanner"
     }
   }
 }
