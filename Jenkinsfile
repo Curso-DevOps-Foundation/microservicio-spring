@@ -8,4 +8,10 @@ node {
   stage('Test'){
   sh "./gradlew clean test"
   }
+  
+  stage('SonarQube') {
+    withSonarQubeEnv() { 
+      sh './gradlew sonarqube'
+    }
+  }
 }
