@@ -11,7 +11,7 @@ node {
   
   stage('Sonar') {
     withSonarQubeEnv() { 
-      sh "${scannerHome}/bin/sonar-scanner"
+      sh "./gradlew sonarqube -Dsonar.verbose=true"
     }
   }
 }
