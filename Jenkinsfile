@@ -11,7 +11,7 @@ node {
   
   stage('Sonar') {
     withSonarQubeEnv() { 
-      sh "./gradlew sonarqube -Dsonar.verbose=true --stacktrace --debug"
+      sh "./gradlew sonarqube --stacktrace"
     }
   }
 }
